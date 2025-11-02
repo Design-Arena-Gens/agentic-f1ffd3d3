@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hangman (Python via Pyodide)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <script defer src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Hangman</h1>
+      <button id="new-game" class="primary">New Game</button>
+    </header>
+
+    <section class="status">
+      <div class="masked" id="masked-word">Loading...</div>
+      <div class="meta">
+        <div><strong>Remaining:</strong> <span id="remaining">-</span></div>
+        <div><strong>Wrong:</strong> <span id="wrong-letters">-</span></div>
+      </div>
+      <div class="message" id="message"></div>
+    </section>
+
+    <section class="keyboard" id="keyboard"></section>
+  </div>
+
+  <noscript>
+    This app requires JavaScript to run Python in the browser via Pyodide.
+  </noscript>
+</body>
+</html>
